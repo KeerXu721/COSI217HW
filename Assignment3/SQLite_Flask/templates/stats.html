@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        table {
+            width: auto;
+            border-collapse: collapse;
+            margin: 0 auto; /* Center the table horizontally */
+
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Entity</th>
+            <th>Entity Count</th>
+            <th>Dependency</th>
+        </tr>
+        {% for entity in entity_data %}
+        <tr>
+            <td>{{ entity.entity }}</td>
+            <td>{{ entity.entity_count }}</td>
+            <td>
+                {% for rel in entity.relation %}
+                {{ rel }}<br>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p style="text-align: center;"><a href="/get">back to form</a></p>
+</body>
+</html>
