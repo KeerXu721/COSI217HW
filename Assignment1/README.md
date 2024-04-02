@@ -68,6 +68,6 @@ process. In the dependency parsing page, you can choose table or graph to displa
 
 #### To run this application:
 ```bash
-streamlit run app_streamlit.py
+streamlit run app.py
 ```
 
